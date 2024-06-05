@@ -16,6 +16,7 @@ dependencies:
   flutter_rating_bar:
   dotted_border:
   sizer:
+  flutter_launcher_icons:
   flutter_native_splash:
   http:
   json_annotation:
@@ -57,6 +58,11 @@ flutter:
         - asset: fonts/Roboto-Italic.ttf
           style: italic
 
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/ic_launcher.png"
+
 flutter_native_splash:
   color: "#ffffff"
-  image: assets/splash.png
+  image: assets/ic_splash.png
