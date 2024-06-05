@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class BaseController extends GetxController {
@@ -6,4 +7,5 @@ class BaseController extends GetxController {
   void onItemTapped(int index) {
     selectedIndex.value = index;
   }
+
 }

@@ -38,6 +38,7 @@ flutter:
 
   assets:
     - assets/
+    - assets/svg/
     - assets/data/response.json
 
   fonts:
