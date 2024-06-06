@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
           initialBinding: InitialBinding(),
           getPages: AppPages.pages,
           theme: ThemeData(
+            brightness: Brightness.light,
             fontFamily: 'Roboto',
           ),
           debugShowCheckedModeBanner: false,

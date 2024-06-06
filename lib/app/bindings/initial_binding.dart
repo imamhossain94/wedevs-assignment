@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 class InitialBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<ApiService>(() => ApiService());
-    Get.lazyPut<LocalDataRepository>(() => LocalDataRepository());
+    Get.lazyPut<ApiService>(() => ApiService(), fenix: true);
+    Get.lazyPut<LocalDataRepository>(() => LocalDataRepository(), fenix: true);
   }
 }

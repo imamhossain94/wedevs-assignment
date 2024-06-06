@@ -5,6 +5,7 @@ class DokanIcon {
   static const String _basePath = 'assets/svg';
 
   static const String cart = '$_basePath/ic_cart.svg';
+  static const String camera = '$_basePath/ic_camera.svg';
   static const String envelop = '$_basePath/ic_envelop.svg';
   static const String eyeSlash = '$_basePath/ic_eye_slash.svg';
   static const String facebook = '$_basePath/ic_facebook.svg';
@@ -19,12 +20,18 @@ class DokanIcon {
   static const String setting = '$_basePath/ic_setting.svg';
   static const String user = '$_basePath/ic_user.svg';
 
-  static SvgPicture icon(String iconName, {double size = 24, Color color = Colors.black}) {
-    return SvgPicture.asset(
-      iconName,
-      width: size,
+  static SizedBox icon(String iconName, {double size = 24, Color? color}) {
+    return SizedBox(
       height: size,
-      colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
+      width: size,
+      child: Center(
+        child: SvgPicture.asset(
+          iconName,
+          width: size,
+          height: size,
+          colorFilter: color != null ? ColorFilter.mode(color, BlendMode.srcIn) : null,
+        ),
+      ),
     );
   }
 }
