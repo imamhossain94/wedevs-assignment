@@ -28,7 +28,7 @@ class AppRoutes {
 }
 
 class AppPages {
-  static const INITIAL = AppRoutes.HOME;
+  static const INITIAL = AppRoutes.BASE;
   static final pages = [
     GetPage(name: AppRoutes.LOGIN, page: () => LoginPage(), binding: AuthBinding()),
     GetPage(name: AppRoutes.SIGNUP, page: () => SignupPage(), binding: AuthBinding()),

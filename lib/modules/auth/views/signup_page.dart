@@ -25,9 +25,6 @@ class _SignUpPageState extends State<SignupPage> {
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController confirmPasswordController = TextEditingController();
   
-  
-  
-
 
   @override
   Widget build(BuildContext context) {

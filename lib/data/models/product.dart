@@ -5,12 +5,15 @@ class Product {
   final String slug;
   final String description;
   final String shortDescription;
-  final String price;
-  final String regularPrice;
+  final double price;
+  final double? regularPrice;
   final String salePrice;
   final bool featured;
+  final int ratingCount;
+  final int totalSales;
   final String permalink;
   final String imageUrl;
+  final DateTime dateModified;
 
   Product({
     required this.id,
@@ -22,8 +25,11 @@ class Product {
     required this.regularPrice,
     required this.salePrice,
     required this.featured,
+    required this.ratingCount,
+    required this.totalSales,
     required this.permalink,
     required this.imageUrl,
+    required this.dateModified,
   });
 
   factory Product.fromJson(Map<String, dynamic> json) {
@@ -33,12 +39,15 @@ class Product {
       slug: json['slug'],
       description: json['description'],
       shortDescription: json['short_description'],
-      price: json['price'],
-      regularPrice: json['regular_price'],
+      price: double.tryParse(json['price']) ?? 0,
+      regularPrice: double.tryParse(json['regular_price']),
       salePrice: json['sale_price'],
       featured: json['featured'],
+      ratingCount: json['rating_count'],
+      totalSales: json['total_sales'],
       permalink: json['permalink'],
       imageUrl: json['images'][0]['src'],
+      dateModified: DateTime.parse(json['date_modified']),
     );
   }
 

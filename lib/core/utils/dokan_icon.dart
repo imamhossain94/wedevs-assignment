@@ -14,10 +14,12 @@ class DokanIcon {
   static const String heart = '$_basePath/ic_heart.svg';
   static const String home = '$_basePath/ic_home.svg';
   static const String listBullet = '$_basePath/ic_list_bullet.svg';
+  static const String arrowDown = '$_basePath/ic_arrow_down.svg';
   static const String lock = '$_basePath/ic_lock.svg';
   static const String notificationBell = '$_basePath/ic_notification_bell.svg';
   static const String search = '$_basePath/ic_search.svg';
   static const String setting = '$_basePath/ic_setting.svg';
+  static const String star = '$_basePath/ic_star.svg';
   static const String user = '$_basePath/ic_user.svg';
 
   static SizedBox icon(String iconName, {double size = 24, Color? color}) {

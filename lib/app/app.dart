@@ -6,6 +6,7 @@ import 'package:dokan/app/bindings/initial_binding.dart';
 import 'package:sizer/sizer.dart';
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
