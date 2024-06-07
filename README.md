@@ -10,6 +10,8 @@ Dokan is a Flutter-based mobile application that interacts with a WordPress back
 - Profile Management
 - Product Display
 - Bottom Navigation with Multiple Tabs (Home, Menu, Search, Cart, Profile)
+- Modular
+- MVVM
 - Repository Pattern Implementation
 - GetX for State Management and Dependency Injection
 - Build Flavors (Development, Production)
@@ -74,8 +76,8 @@ lib/
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/dokan-flutter-app.git
-   cd dokan-flutter-app
+   git clone https://github.com/imamhossain94/wedevs-assignment.git
+   cd wedevs-assignment
     ```
 
 2. **Run Flutter Packages:**
@@ -84,20 +86,19 @@ lib/
    flutter pub get
     ```
 
-2. **Run the App:**
+3. **Run the App:**
 
-    * For Development Flavor:
-       ```bash
-       flutter run --flavor dev -t lib/flavors/dev.dart
-        ```
-    * For Production Flavor:
-       ```bash
-       flutter run --flavor prod -t lib/flavors/prod.dart
-        ```
+- For Development Flavor:
+   ```bash
+   flutter run --flavor dev -t lib/flavors/dev.dart
+    ```
+- For Production Flavor:
+   ```bash
+   flutter run --flavor prod -t lib/flavors/prod.dart
+    ```
 ## Configuration
 - Configure your WordPress backend URLs in the appropriate flavor files (dev.dart and prod.dart) under lib/flavors/.
 - Ensure the necessary WordPress plugins are installed and configured for user authentication (JWT Authentication for WP REST API).
-
 
 ## Contributors
 
