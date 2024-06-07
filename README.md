@@ -59,7 +59,7 @@ lib/
 │   │   └── views/
 ├── main.dart
 └── README.md
-
+```
 
 ## Getting Started
 
@@ -76,8 +76,30 @@ lib/
    ```bash
    git clone https://github.com/yourusername/dokan-flutter-app.git
    cd dokan-flutter-app
+    ```
+
+2. **Run Flutter Packages:**
+
+   ```bash
+   flutter pub get
+    ```
+
+2. **Run the App:**
+
+    * For Development Flavor:
+       ```bash
+       flutter run --flavor dev -t lib/flavors/dev.dart
+        ```
+    * For Production Flavor:
+       ```bash
+       flutter run --flavor prod -t lib/flavors/prod.dart
+        ```
+## Configuration
+- Configure your WordPress backend URLs in the appropriate flavor files (dev.dart and prod.dart) under lib/flavors/.
+- Ensure the necessary WordPress plugins are installed and configured for user authentication (JWT Authentication for WP REST API).
 
 
+## Contributors
 
-
+- [Md Imam Hossain](https://github.com/imamhossain94/)
 
