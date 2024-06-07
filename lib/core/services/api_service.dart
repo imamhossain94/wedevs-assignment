@@ -1,9 +1,11 @@
 import 'dart:convert';
 
+import 'package:dokan/flavors/flavor_config.dart';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  static const baseUrl = 'https://apptest.dokandemo.com/wp-json/';
+
+  String get baseUrl => FlavorConfig.instance.values.baseUrl;
 
   Future<http.Response> post(String endpoint, Map<String, dynamic> data) async {
     final url = Uri.parse('$baseUrl$endpoint');

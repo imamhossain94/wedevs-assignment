@@ -1,4 +1,4 @@
-import 'package:dokan/modules/home/views/home_page.dart';
+import 'package:dokan/flavors/flavor_config.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:dokan/app/routes.dart';
@@ -6,12 +6,13 @@ import 'package:dokan/app/bindings/initial_binding.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyApp extends StatelessWidget {
+
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
+
     return ScreenUtilInit(
-        //designSize: const Size(375, 812),
         minTextAdapt: true,
         splitScreenMode: true,
         useInheritedMediaQuery: true,
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
             brightness: Brightness.light,
             fontFamily: 'Roboto',
           ),
-          debugShowCheckedModeBanner: false,
+          debugShowCheckedModeBanner: FlavorConfig.isDevelopment(),
           home: widget,
         );
       }
