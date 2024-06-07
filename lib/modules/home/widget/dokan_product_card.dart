@@ -3,7 +3,7 @@ import 'package:dokan/core/utils/dokan_icon.dart';
 import 'package:dokan/data/models/product.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 class ProductCard extends StatelessWidget {
@@ -25,7 +25,7 @@ class ProductCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              flex: 3,
+              flex: 4,
               child: CachedNetworkImage(
                 imageUrl: product.imageUrl,
                 fit: BoxFit.cover,
@@ -41,7 +41,7 @@ class ProductCard extends StatelessWidget {
             Expanded(
               flex: 2,
               child: Padding(
-                padding: EdgeInsets.fromLTRB(3.w, 1.h, 2.w, 1.h),
+                padding: EdgeInsets.fromLTRB(10.w, 5.h, 10.w, 5.h),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -57,7 +57,7 @@ class ProductCard extends StatelessWidget {
                         fontWeight: FontWeight.normal,
                       ),
                     ),
-                    SizedBox(height: 2.h),
+                    SizedBox(height: 5.h),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [

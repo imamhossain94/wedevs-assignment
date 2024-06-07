@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DokanTextField extends StatefulWidget {
   final TextEditingController controller;
@@ -36,7 +36,7 @@ class _DokanTextFieldState extends State<DokanTextField> {
       alignment: Alignment.center,
       padding: EdgeInsets.symmetric(horizontal: 1.5.w, vertical: 0.5.h),
       // Use symmetric padding
-      margin: EdgeInsets.symmetric(vertical: 1.2.h, horizontal: 6.w),
+      margin: EdgeInsets.symmetric(vertical: 10.h, horizontal: 25.w),
       // height: 7.h,
       decoration: BoxDecoration(
         color: Colors.white,

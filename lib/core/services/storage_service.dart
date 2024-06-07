@@ -9,3 +9,11 @@ FilterOption getCheckedFilter() {
 void setCheckedFilter(FilterOption filter) {
   GetStorage().write('checkedFilter', filter.name);
 }
+
+String? getAuthToken() {
+  return GetStorage().read('authToken');
+}
+
+void setAuthToken(String token) {
+  GetStorage().write('authToken', token);
+}

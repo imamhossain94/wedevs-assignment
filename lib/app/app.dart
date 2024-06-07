@@ -3,16 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:dokan/app/routes.dart';
 import 'package:dokan/app/bindings/initial_binding.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Sizer(
-        builder: (context, orientation, deviceType) {
+    return ScreenUtilInit(
+        //designSize: const Size(375, 812),
+        minTextAdapt: true,
+        splitScreenMode: true,
+        useInheritedMediaQuery: true,
+        rebuildFactor: (old, data) => true,
+        builder: (context, widget) {
         return GetMaterialApp(
+          useInheritedMediaQuery: true,
           initialRoute: AppPages.INITIAL,
           initialBinding: InitialBinding(),
           getPages: AppPages.pages,
@@ -21,6 +27,7 @@ class MyApp extends StatelessWidget {
             fontFamily: 'Roboto',
           ),
           debugShowCheckedModeBanner: false,
+          home: widget,
         );
       }
     );

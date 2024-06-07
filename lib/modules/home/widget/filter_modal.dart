@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:dokan/modules/home/models/filter_option.dart';
 import 'package:dokan/modules/home/widget/dokan_filtere_item_list.dart';
@@ -20,13 +20,13 @@ void showFilterModal(BuildContext context, {
     context: context,
     builder: (builder) {
       return Padding(
-        padding: EdgeInsets.all(4.w),
+        padding: EdgeInsets.all(15.w),
         child: Wrap(
           crossAxisAlignment: WrapCrossAlignment.start,
           children: [
             Center(
               child: Padding(
-                padding: EdgeInsets.only(top: 1.h, bottom: 3.h),
+                padding: EdgeInsets.only(top: 5.h, bottom: 10.h),
                 child: SizedBox(
                   width: 15.w,
                   child: Divider(
@@ -48,13 +48,16 @@ void showFilterModal(BuildContext context, {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 1.h, bottom: 6.h, left: 1.w),
+              padding: EdgeInsets.only(top: 10.h, bottom: 25.h, left: 5.w),
               child: DokanFilterItemList(
                 onValueChanged: onValueChanged,
               ),
             ),
             Row(
               children: [
+                SizedBox(
+                  width: 0.w,
+                ),
                 Expanded(
                   child: Card(
                     shape: RoundedRectangleBorder(
@@ -63,7 +66,7 @@ void showFilterModal(BuildContext context, {
                     ),
                     elevation: 0,
                     child: SizedBox(
-                      height: 8.h,
+                      height: 50.h,
                       child: CupertinoButton(
                         onPressed: onCancel,
                         padding: EdgeInsets.zero,
@@ -83,11 +86,11 @@ void showFilterModal(BuildContext context, {
                   ),
                 ),
                 SizedBox(
-                  width: 5.w,
+                  width: 10.w,
                 ),
                 Expanded(
                   child: SizedBox(
-                    height: 8.h,
+                    height: 50.h,
                     child: CupertinoButton(
                       onPressed: onApply,
                       padding: EdgeInsets.zero,
@@ -104,6 +107,9 @@ void showFilterModal(BuildContext context, {
                       ),
                     ),
                   ),
+                ),
+                SizedBox(
+                  width: 5.w,
                 ),
               ],
             ),

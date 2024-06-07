@@ -16,14 +16,11 @@ dependencies:
   get_storage:
   flutter_rating_bar:
   dotted_border:
-  sizer:
-  flutter_launcher_icons:
-  flutter_native_splash:
   http:
   json_annotation:
-  json_serializable:
   cached_network_image:
   flutter_svg:
+  fluttertoast:
 
   cupertino_icons: ^1.0.6
 
@@ -31,6 +28,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner:
+  json_serializable:
+  flutter_screenutil:
 
   flutter_lints: ^3.0.0
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class FilterItem extends StatelessWidget {
   final String title;
@@ -18,7 +18,7 @@ class FilterItem extends StatelessWidget {
     return InkWell(
       onTap: onValueChanged,
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 1.h),
+        padding: EdgeInsets.symmetric(vertical: 5.h),
         child: Row(
           children: [
             SizedBox(

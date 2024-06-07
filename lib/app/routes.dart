@@ -1,3 +1,4 @@
+import 'package:dokan/core/services/storage_service.dart';
 import 'package:dokan/modules/auth/bindings/auth_binding.dart';
 import 'package:dokan/modules/auth/views/login_page.dart';
 import 'package:dokan/modules/auth/views/signup_page.dart';
@@ -8,7 +9,7 @@ import 'package:dokan/modules/cart/views/cart_page.dart';
 import 'package:dokan/modules/category/bindings/category_binding.dart';
 import 'package:dokan/modules/category/views/category_page.dart';
 import 'package:dokan/modules/explore/bindings/explore_binding.dart';
-import 'package:dokan/modules/explore/views/search_page.dart';
+import 'package:dokan/modules/explore/views/explore_page.dart';
 import 'package:dokan/modules/home/bindings/home_binding.dart';
 import 'package:dokan/modules/home/views/home_page.dart';
 import 'package:dokan/modules/profile/bindings/profile_binding.dart';
@@ -28,7 +29,7 @@ class AppRoutes {
 }
 
 class AppPages {
-  static const INITIAL = AppRoutes.BASE;
+  static String INITIAL = getAuthToken() == null ? AppRoutes.LOGIN : AppRoutes.BASE;
   static final pages = [
     GetPage(name: AppRoutes.LOGIN, page: () => LoginPage(), binding: AuthBinding()),
     GetPage(name: AppRoutes.SIGNUP, page: () => SignupPage(), binding: AuthBinding()),

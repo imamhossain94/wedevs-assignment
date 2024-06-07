@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DokanIconButton extends StatelessWidget {
   final Widget icon;
@@ -18,7 +18,7 @@ class DokanIconButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         splashColor: Colors.grey, // Splash color
         onTap: onPressed,
-        child: SizedBox(width: 7.h, height: 7.h, child: Center(child: icon)),
+        child: SizedBox(width: 50.h, height: 50.h, child: Center(child: icon)),
       ),
     );
   }

@@ -15,6 +15,8 @@ class DokanIcon {
   static const String home = '$_basePath/ic_home.svg';
   static const String listBullet = '$_basePath/ic_list_bullet.svg';
   static const String arrowDown = '$_basePath/ic_arrow_down.svg';
+  static const String arrowDownSQ = '$_basePath/ic_arrow_down_sq.svg';
+  static const String arrowRightSQ = '$_basePath/ic_arrow_right_sq.svg';
   static const String lock = '$_basePath/ic_lock.svg';
   static const String notificationBell = '$_basePath/ic_notification_bell.svg';
   static const String search = '$_basePath/ic_search.svg';
